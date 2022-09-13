@@ -14,3 +14,6 @@ CREATE table role_user (
 -- INSERT role_user
 insert into role_user (id, role) values (1, 'Premium')
 insert into role_user (id, role) values (2, 'Standard')
+
+-- TEST INSERT
+select * from role_user

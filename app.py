@@ -81,15 +81,14 @@ def parserInt(cadena):
     return cadenaParseInt
 
 @app.route('/register', methods = ["GET", "POST"])
-def register():
-
-    conn = get_connection()
-    
+def register():    
 
     if request.method == 'GET':
         return render_template("register.html")
 
     else:
+        conn = get_connection()
+        
         name = request.form['name']
         email = request.form['email']
         role = request.form['role']
