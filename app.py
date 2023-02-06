@@ -1,7 +1,7 @@
 from json import load
 from flask import Flask, render_template, request, redirect, url_for, flash
 from psycopg import connect
-from notifypy import Notify
+# from notifypy import Notify
 from dotenv import load_dotenv
 from os import environ
 
@@ -16,7 +16,7 @@ dbname = environ.get('DB_NAME')
 user = environ.get('DB_USER')
 password = environ.get('DB_PASSWORD')
 
-notification = Notify()
+# notification = Notify()
 
 def get_connection():
     conn = connect(host=host, port = port, dbname = dbname, user=user, password = password)
